@@ -1,0 +1,47 @@
+/* .form-group {
+    position: relative;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    display: block;
+    border: 1px solid #A7A7A7;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+.form-control:focus {
+    outline: none;
+    border-color: #A7A7A7;
+}
+.form-control:focus ~ .form-label,
+.form-control:not(:placeholder-shown) ~ .form-label {
+    top: -10px;
+    font-size: 12px;
+    color: #A7A7A7;;
+}
+.form-label {
+    color: #A7A7A7;
+    font-size: 16px;
+    position: absolute;
+    pointer-events: none;
+    left: 15px;
+    top: 7px;
+    transition: 0.2s ease all;
+    background: white;
+    padding: 0 5px;
+}
+.form-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+} */
+
+.invalid-feedbacks {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: red;
+  }

@@ -1,0 +1,294 @@
+.card_title_inline {
+        margin-bottom: 0px !important;
+        font-size: 12px;
+    }
+    
+    .custom_height{
+        height: 50px!important;
+        padding-top: 17px !important;
+    }
+    .blue_others {
+        color: #213C95 !important;
+    }
+    
+.mw-540 {
+        max-width: 540px !important;
+    }
+    
+    .bg-lightBlue {
+        background-color: #213C9526 !important;
+    }
+    
+    .bg_lightGreen {
+        background-color: #14ee0126 !important;
+    }
+    
+    .color_yellow {
+        color: #ee8101 !important;
+    }
+    
+.color_green {
+        color: #14EE01 !important;
+    }
+    
+    .color_red {
+        color: #FF0000 !important;
+    }
+    
+    .bg_lightYellow {
+        background-color: #ee810126 !important;
+    }
+    
+    .bg_lightRed {
+        background-color: #FF000026 !important;
+    }
+    
+.border_radius {
+        border-radius: 4% !important;
+    }
+    
+    .pending_border {
+        border-left: 3px solid #ee8101 !important;
+    }
+    
+.approve_border {
+        border-left: 3px solid #14EE01 !important;
+    }
+    
+    .others_border {
+        border-left: 3px solid #213C95 !important;
+    }
+    
+.rejected_border {
+        border-left: 3px solid #FF0000 !important;
+    }
+    
+    .p2 {
+        padding: 2px !important;
+    }
+    
+    /* login page css */
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8ff;
+        margin: 0;
+        padding: 0;
+    }
+    
+.header {
+        background-color: #313A46;
+        padding: 10px 0;
+        text-align: center;
+        color: white;
+        display: flex;
+    }
+    
+.header img {
+        height: 10vh;
+        padding: 0 3rem;
+    }
+    
+.header p {
+    font-size: 30px;
+  font-weight: 600; 
+  text-align: left; 
+  line-height: 2.5;
+    }
+    
+.container_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+.welcome {
+        text-align: left;
+        padding: 20px;
+        font-size: 14px;
+    }
+    
+.welcome h1 {
+        padding-left: 12%;
+    
+    }
+    
+.welcome img {
+        text-align: center !important;
+    }
+    
+.welcome p {
+        font-size: 16px;
+    }
+    
+.login-inner-box {
+        padding: 30px 60px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+.login-box input {
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+.login-box .button_login{
+        margin: auto;
+        background-color: #213C95;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+    .button_register{
+    padding: 10px 40px;
+    margin: auto;
+    background-color: #213C95;
+    border: none;
+    color: white;
+    cursor: pointer; 
+}
+
+.login-box h2 {
+        font-size: 18px;
+    }
+    
+.login-box button:hover {
+        background-color: #002244;
+    }
+    
+.login-box a {
+        text-align: end;
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .footer_div {
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .button_login{
+        display: block;
+        /* margin: 0 100px !important; */
+    }
+    .cisci_logo {
+        height: 5rem;
+        width: 8rem;
+    
+    }
+    
+.cisci_div {
+        display: flex;
+        justify-content: center;
+    }
+    
+.forgot_password {
+        text-align: end;
+        padding: 0 0 2.5rem 0;
+    }
+    
+.forgot_password a {
+        font-size: 12px;
+        text-decoration: none;
+    }
+    
+.query_info {
+        font-size: 13px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+a {
+        text-decoration: none;
+    }
+    
+.login-inner-box.register{
+    z-index: 2;
+    padding: 40px 40px 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.register .cisci_div.register::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo-cisce.png") no-repeat center center;
+    background-position: 50% 0;
+    background-size: contain;
+    opacity: .20;
+}
+.main_heading{
+    position: absolute;
+    font-size: 24px !important;   
+}
+
+.login-box-heading{
+    font-size: 24px;
+    font-weight: 600;
+    color: #3B3B3B;
+    line-height: 27.58px;
+}
+.login-container-bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/BG-login.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    background-color: #F3F3FF;
+    opacity: .4;
+  }
+
+@media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+        }
+    
+    .header img {
+            height: 70px;
+            margin: 0 0 10px 0;
+        }
+    
+    .welcome {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    
+    .welcome h1 {
+            padding-left: 0;
+            text-align: center;
+        }
+    
+    .welcome p {
+            text-align: center;
+        }
+    
+    .forgot_password {
+            text-align: center;
+            padding: 0 0 1rem 0;
+        }
+    }
+
+@media (min-width: 1400) {
+    .login-inner-box.register{
+        padding: 80px 60px;
+    }
+    .login-box-heading{
+        font-size: 24px;
+    }
+}

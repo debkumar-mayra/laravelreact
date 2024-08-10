@@ -1,0 +1,104 @@
+.school-list-item-15px,
+.school-list-item-12px {
+    list-style: none;
+    padding-left: 0;
+}
+
+.school-list-item-15px li,
+.school-list-item-12px li {
+    padding: 12px 10px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom: 1px solid #D3D6E459;
+}
+
+.school-list-item-15px li {
+    padding: 15px 10px;
+}
+
+.school-list-item-12px li p,
+.school-list-item-15px li p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: #464A53;
+}
+
+.school-list-item-12px li p:last-of-type,
+.school-list-item-15px li p:last-of-type {
+    font-weight: 600;
+    white-space: nowrap;
+    color: #313A46;
+}
+
+.container-fluid .container-heading,
+.container-fluid .container-sub-heading {
+    color: #3B3B3B;
+}
+
+.container-sub-heading {
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+.box-sw {
+    box-shadow: 0 0 10px 0 #3B3B3B26;
+}
+
+.meeting-detail-table th,
+.committee-detail-table th,
+.member-detail-table th {
+    color: #464A53;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.meeting-detail-table td,
+.committee-detail-table td,
+.member-detail-table td {
+    font-size: 14px;
+    line-height: 21px;
+    color: #3B3B3B;
+    font-weight: 400;
+}
+
+.committee-detail-table tbody tr td:first-child,
+.member-detail-table tbody tr td:first-child {
+    white-space: nowrap;
+    color: #213C95;
+}
+
+@media (min-width: 600px) {
+
+    .school-list-item-12px li p,
+    .school-list-item-15px li p,
+    .meeting-detail-table td,
+    .committee-detail-table td,
+    .member-detail-table td {
+        font-size: 16px;
+    }
+}
+
+/* Large screens (large desktops) */
+@media (min-width: 1400px) {
+
+    .meeting-detail-table th,
+    .committee-detail-table th,
+    .member-detail-table th,
+    .container-sub-heading {
+        font-size: 16px;
+    }
+
+    .school-list-item-12px li p,
+    .school-list-item-15px li p,
+    .meeting-detail-table td,
+    .committee-detail-table td,
+    .member-detail-table td {
+        font-size: 18px;
+    }
+}

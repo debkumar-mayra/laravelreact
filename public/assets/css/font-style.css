@@ -1,0 +1,37 @@
+/* Default font size for extra small devices (mobile) */
+.font_18_14 {
+    font-size: 14px;
+}
+
+.font_20_16{
+    font-size: 16px;
+}
+.font_22_18{
+    font-size: 18px;
+}
+
+/* Small to large devices (tablets to desktops) */
+@media (min-width: 600px) {
+    .font_18_14 {
+        font-size: 16px;
+    }
+    .font_20_16{
+        font-size: 18px;
+    }
+    .font_22_18{
+        font-size: 20px;
+    }
+}
+
+/* Large screens (large desktops) */
+@media (min-width: 1400px) {
+    .font_18_14 {
+        font-size: 18px;
+    }
+    .font_20_16{
+        font-size: 20px;
+    }
+    .font_22_18{
+        font-size: 22px;
+    }
+}

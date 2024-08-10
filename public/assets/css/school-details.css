@@ -1,0 +1,500 @@
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif !important;
+    font-style: normal;
+}
+.step-heading {
+    white-space: unset !important;
+    min-width: 150px !important;
+    text-align: center;
+}
+.step-item-progress {
+    color: #e0e0e7 !important;
+}
+.step-item-border {
+    color: #ffffff !important;
+    border: 0.25em solid #213c95 !important;
+}
+
+.deficiency-box {
+    height: 400px;
+    overflow: auto;
+}
+.deficiency-parent-box {
+    max-height: 666px;
+}
+.deficiency-box::-webkit-scrollbar,
+.deficiency-parent-box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.deficiency-box::-webkit-scrollbar-track,
+.deficiency-parent-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.deficiency-box::-webkit-scrollbar-thumb,
+.deficiency-parent-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.deficiency-box::-webkit-scrollbar-thumb:hover,
+.deficiency-parent-box::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}
+.custom-nav-link {
+    display: inline-block !important;
+    display: block !important; /* Forces the text span to behave like a block element */
+    white-space: normal !important; /* Allows text to wrap to new lines */
+    word-wrap: break-word !important;
+    padding-left: 20px !important;
+}
+
+
+.cisce-logo-container {
+    margin: 10px auto !important;
+}
+
+.back-button {
+    font-family: "Ubuntu", sans-serif;
+    display: inline-block;
+    padding: 0px 20px;
+    margin-top: 1px;
+    font-size: 18px;
+}
+
+
+#documentButton {
+    position: absolute;
+    top: 200px;
+    right: -3px;
+    padding: 12px;
+    z-index: 999;
+    border-radius: 22px 0px 0px 22px;
+    background-color: #213c95;
+}
+#documentButton1{
+    position: absolute;
+    top: 133px;
+    right: -3px;
+    padding: 12px;
+    z-index: 999;
+    border-radius: 22px 0px 0px 22px;
+    background-color: #213c95;
+}
+#rightSidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999 !important;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+#rightSidebar.open {
+    transform: translateX(0);
+}
+.rightSidebarContent {
+    padding: 20px;
+}
+.document-box-right-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.document-box-right-bar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.document-box-right-bar p {
+    font-size: 14px;
+    margin: 0;
+}
+.documet-extension {
+    font-size: 13px !important;
+    background-color: #213c95;
+    padding: 6px 2px 6px 2px;
+}
+.documet-extension-parent {
+    padding-right: 10px;
+}
+.add-docs {
+    text-align: right;
+}
+.documet-button {
+    background: #213c95 !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    text-transform: none !important;
+}
+
+.document-button-add {
+    background: #213c95 !important;
+    border-radius: 10px !important;
+    font-size: 12px !important;
+    padding: 10px 10px 10px 10px !important;
+}
+.document-comment {
+    height: 100px;
+}
+.close-button-right-bar {
+    float: right;
+    border: none;
+    background: white;
+    font-size: 14px;
+    margin-top: 5px !important;
+}
+.file-upload-div {
+    padding: 0px !important;
+    min-height: 0px !important;
+}
+.address-details-grid {
+    padding: 10px !important;
+}
+.bottom-review-button {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.school-imageBox {
+    border-radius: 5px;
+    height: 210px;
+    width: 100%;
+}
+.card-for-image {
+    padding: 10px;
+}
+
+.color-gray {
+    color: #3b3b3b;
+}
+.font-weight-bold {
+    font-weight: 500;
+}
+.text-color-des {
+    color: #a7a7a7;
+}
+.text-box-left {
+    margin-bottom: 1px;
+}
+.color-blue {
+    color: #213c95;
+}
+.color-side-icons {
+    color: #213c95 !important;
+    font-size: 18px;
+}
+.cisce-logo {
+    width: 80% !important;
+    height: auto !important;
+}
+.contact-info-grid {
+    padding-right: 25px;
+}
+.contact-info-parent {
+    justify-content: space-between;
+    display: flex;
+}
+
+.managing-committee-des {
+    font-size: 16px;
+    line-height: 18px;
+    color: #3b3b3b;
+}
+.progress-line {
+    background-color: #fafbfe !important;
+}
+.steps-before:before {
+    height: 3px !important;
+}
+.deficiency-box i.text-success {
+    background-color: #28a74530 !important;
+    border-radius: 4px;
+}
+.deficiency-box i.text-danger {
+    background-color: #dc35451f !important;
+    border-radius: 4px;
+}
+.data-table-first-tr-color tbody tr td:first-of-type {
+    color: #213c95 !important;
+    font-weight: 500 !important;
+}
+.side-nav-second-level li a i {
+    display: inline-block;
+    min-width: 25px;
+}
+
+.side-nav-second-level li {
+    border-bottom: 1px solid #d3d6e459;
+}
+
+.side-nav-second-level li:last-of-type {
+    border-bottom: none;
+}
+
+.side-nav-second-level li a {
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.form-container-box {
+    margin-top: 5px;
+    padding: 0px !important;
+}
+.school-form-grid-set {
+    padding: 0px !important;
+}
+.nearest-empty-grid {
+    min-height: 185px !important;
+}
+.file-upload-file-icon {
+    padding: 0px !important;
+    min-height: 0px !important;
+    height: 162px;
+    border-radius: 4px;
+    background-color: #d9d9d9;
+    border: 2px solid #d9d9d9;
+}
+.file-icon-plus {
+    margin: 65px auto !important;
+    text-align: center;
+}
+.noc-cetificate-switch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-open-drawer {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: white !important;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* CSS for the right drawer */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Initially off-screen */
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+.drawer.open {
+    right: 0; /* Slide in when open */
+}
+.drawer-content {
+    padding: 20px;
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.btn-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #999;
+}
+.border-button-style {
+    border: 1px solid #213c95;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    text-transform: none !important;
+    background: white;
+    padding: 4px 18px;
+    color: #213c95;
+}
+.reduce-button-gap {
+    gap: 20px !important;
+}
+.drawer-heading-color {
+    color: #3b3b3b;
+}
+
+
+.div-center-steper {
+    display: flex !important;
+    justify-content: center !important;
+    background-color: white !important;
+}
+.div-center-steper .line-height-min {
+    line-height: 19.98px;
+}
+.color-3B3B3B {
+    color: #3b3b3b;
+}
+.preliminary-grid-box {
+    box-shadow: 0px 0px 10px 0px #3b3b3b;
+}
+.steper-grid {
+    text-align: center;
+}
+
+.newcll .nav-pills .nav-link.active {
+    background-color: #d9d9d900 !important;
+}
+.newcll .nav-pills .nav-link.active span {
+    color: #213c95 !important;
+}
+.steper-tabs {
+    background-color: white !important;
+}
+.formTags .form-select {
+    font-size: 14px;
+    padding: 5px 4px 3px 11px;
+    color: #a7a7a7;
+    height: 31.96px;
+}
+
+.text-color-3B3B3B {
+    color: #3b3b3b;
+}
+
+.custom-select-group {
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+    border: 1px solid #bdbdbd !important;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075) !important;
+    color: #a7a7a7 !important;
+}
+.renewalFormhide{
+    display: none !important;
+}
+.downloadnotarizationbutton{
+    color: white;
+    background-color: #a7a7a7;
+    padding: 8px 14px;
+    border: none;
+}
+.fileUploadBox{
+    width: 98% !important;
+    border: 1px solid #dee2e6
+
+}
+.school-list-item-15px,
+.school-list-item-12px {
+    list-style: none;
+    padding-left: 0;
+}
+
+.school-list-item-15px li,
+.school-list-item-12px li {
+    padding: 12px 5px;
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    border-bottom: 1px solid #D3D6E459;
+}
+
+.school-list-item-15px li {
+    padding: 15px 5px;
+}
+
+.school-list-item-12px li p,
+.school-list-item-15px li p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 21px;
+    color: #464A53;
+}
+
+.school-list-item-12px li p:last-of-type,
+.school-list-item-15px li p:last-of-type {
+    font-weight: 600;
+    white-space: nowrap;
+    color: #313A46;
+}
+
+.container-fluid .container-heading,
+.container-fluid .container-sub-heading {
+    color: #3B3B3B;
+}
+
+.container-sub-heading {
+    font-size: 14px;
+    line-height: 16px;
+
+}
+
+.box-sw {
+    box-shadow: 0 0 10px 0 #3B3B3B26;
+    border-radius: 0.7rem;
+    background-color: white !important;
+}
+
+.meeting-detail-table th,
+.committee-detail-table th,
+.member-detail-table th {
+    color: #464A53;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.meeting-detail-table td,
+.committee-detail-table td,
+.member-detail-table td {
+    font-size: 14px;
+    line-height: 21px;
+    color: #3B3B3B;
+    font-weight: 400;
+}
+
+.committee-detail-table tbody tr td:first-child,
+.member-detail-table tbody tr td:first-child {
+    white-space: nowrap;
+    color: #213C95;
+}
+
+@media (min-width: 600px) {
+
+    .school-list-item-12px li p,
+    .school-list-item-15px li p,
+    .meeting-detail-table td,
+    .committee-detail-table td,
+    .member-detail-table td {
+        font-size: 16px;
+    }
+}
+
+/* Large screens (large desktops) */
+@media (min-width: 1400px) {
+
+    .meeting-detail-table th,
+    .committee-detail-table th,
+    .member-detail-table th,
+    .container-sub-heading {
+        font-size: 16px;
+    }
+
+    .school-list-item-12px li p,
+    .school-list-item-15px li p,
+    .meeting-detail-table td,
+    .committee-detail-table td,
+    .member-detail-table td
+    {
+    font-size: 18px;
+}
+}
