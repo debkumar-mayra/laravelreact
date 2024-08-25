@@ -1,6 +1,10 @@
+import { Head } from "@inertiajs/react";
+
 export default function ForgotPassword() {
     return (
         <>
+            <Head title="Forgot Password" />
+
             <div
                 id="default-carousel"
                 className="relative w-full"

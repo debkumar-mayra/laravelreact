@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import LoadingButton from "../../components/LoadingButton";
 import PasswordInput from "../../components/PasswordInput";
 
@@ -23,6 +23,8 @@ export default function ChangePassword() {
 
     return (
         <>
+            {/* <Head title="Admin | Change password" /> */}
+
             <form onSubmit={submit} className="bg-white shadow-md rounded p-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                     <div>

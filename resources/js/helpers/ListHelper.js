@@ -17,7 +17,6 @@ class ListHelper {
             confirmButtonText: confirmButtonText,
         }).then((result) => {
             if (result.isConfirmed) {
-                // console.log("hhhhhhhhhhhhhhhhhhhhhhh");
                 router.get(route);
             }
         });

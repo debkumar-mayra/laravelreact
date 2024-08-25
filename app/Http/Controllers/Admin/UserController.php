@@ -46,7 +46,6 @@ class UserController extends Controller
     public function createUser()
     {
       if (request()->isMethod('post')) {
-  
         request()->validate([
           'first_name' => 'required|max:40',
           'last_name' => 'required|max:40',
@@ -70,8 +69,8 @@ class UserController extends Controller
         $user->password = request()->password;
         $user->phone = request()->phone;
         $user->dob = date('Y-m-d', strtotime(request()->dob));
-        $user->active = request()->status ?? 1;
-        $user->profile_photo_path = Request::file('profile_photo') ? Request::file('profile_photo')->store('profile_photo') : null;
+        $user->status = request()->status ?? 1;
+        $user->profile_photo = Request::file('profile_photo') ? Request::file('profile_photo')->store('profile_photo') : null;
         $user->save();
         $user->assignRole('USER');
         session()->flash('success', 'User successfully created');
@@ -79,6 +78,7 @@ class UserController extends Controller
       }
   
       return Inertia::render('Admin/User/CreateEdit');
+
     }
   
   
@@ -88,8 +88,7 @@ class UserController extends Controller
   
       if (request()->isMethod('post')) {
   
-        // dd(request()->all(),Request::file('profile_photo'));
-        
+      
         $credentials = request()->validate([
           'first_name' => 'required|max:40',
           'last_name' => 'required|max:40',
@@ -106,7 +105,6 @@ class UserController extends Controller
         $user->dob = date('Y-m-d', strtotime(request()->dob));
         $user->status = request()->status ?? 1;
         if (Request::hasFile('profile_photo')) {
-          // dd(Request::file('profile_photo'));
           File::delete(storage_path('app/' . $user->profile_photo_path));
           $user->profile_photo = Request::file('profile_photo')->store('profile_photo','public');
         }

@@ -8,7 +8,6 @@ export default function Thead({
     field_name = "",
     children = "cloumn name",
 }) {
-    console.log(urlParams.get("short_by"));
     const [shortBy, setShortBy] = useState(
         urlParams.get("short_by") == "desc" ? true : false
     );

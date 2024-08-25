@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import InputBox from "../../components/InputBox";
 import LoadingButton from "../../components/LoadingButton";
 import ChangePassword from "./ChangePassword";
@@ -24,6 +24,8 @@ export default function Profile(props) {
 
     return (
         <>
+            <Head title="Admin | Profile" />
+
             <div className="min-h-screen">
                 <div>
                     <form

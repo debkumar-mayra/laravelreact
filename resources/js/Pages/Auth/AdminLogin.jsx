@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import InputBox from "../../components/InputBox";
 import PasswordInput from "../../components/PasswordInput";
 import LoadingButton from "../../components/LoadingButton";
@@ -24,6 +24,7 @@ export default function AdminLogin() {
 
     return (
         <>
+            <Head title="Login" />
             <div className="bg-gray-100 flex items-center justify-center min-h-screen">
                 <div className="w-full max-w-md">
                     <div className="text-center mb-10">

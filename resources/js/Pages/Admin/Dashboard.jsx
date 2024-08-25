@@ -10,6 +10,7 @@ import {
     LineElement,
     Title,
 } from "chart.js";
+import { Head } from "@inertiajs/react";
 ChartJS.register(
     ArcElement,
     CategoryScale,
@@ -71,6 +72,8 @@ export default function Dashboard(props) {
 
     return (
         <>
+            <Head title="Admin | Dashboard" />
+
             <div className="grid sm:grid-flow-col sm:grid-cols-2 gap-2">
                 <div className="min-w-md text-center">
                     <Pie data={data} options={options} />

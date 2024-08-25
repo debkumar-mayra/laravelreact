@@ -3,7 +3,7 @@ import Paginate from "../../../components/Paginate";
 import Perpage from "../../../components/Perpage";
 import ListHelper from "../../../helpers/ListHelper";
 import { useEffect, useRef, useState } from "react";
-import { Link, router, useForm } from "@inertiajs/react";
+import { Head, Link, router, useForm } from "@inertiajs/react";
 import { debounce, pickBy } from "lodash";
 import NameImage from "../../../components/NameImage";
 import Thead from "../../../components/table/Thead";
@@ -56,10 +56,20 @@ export default function UserList(props) {
 
     return (
         <>
+            <Head title="Admin | Users" />
+
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg p-3 pb-8 min-h-lvh">
                 <div className="flex items-center justify-between flex-column md:flex-row flex-wrap space-y-4 md:space-y-0 py-4 bg-white dark:bg-gray-900">
                     <div>
                         <Perpage />
+                    </div>
+                    <div className="relative">
+                        <Link
+                            href={route("admin.createUser")}
+                            className="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+                        >
+                            Add New
+                        </Link>
                     </div>
                 </div>
                 <div className="min-w-48">

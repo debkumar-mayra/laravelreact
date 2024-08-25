@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 import { useState } from "react";
 import InputBox from "../../../components/InputBox";
 import LoadingButton from "../../../components/LoadingButton";
@@ -11,14 +11,15 @@ export default function CreateEdit(props) {
     const { data, setData, post, reset, processing, errors } = useForm({
         first_name: props.user?.first_name ?? "",
         last_name: props.user?.last_name ?? "",
+        password: "",
         email: props.user?.email ?? "",
         dob: props.user?.dob ?? "",
         phone: props.user?.phone ?? "",
-        status: props.user?.status ?? "",
+        status: props.user?.status ?? 1,
         profile_photo: "",
     });
 
-    const [preview, setPreview] = useState(props.user.profile_photo || null);
+    const [preview, setPreview] = useState(props.user?.profile_photo || null);
 
     const handleChange = (e) => {
         setData(e.target.name, e.target.value);
@@ -38,14 +39,27 @@ export default function CreateEdit(props) {
         e.preventDefault();
         toast.success("Profile successfully updated");
 
-        post(route("admin.editUser", props.user.id), {
-            preserveScroll: true,
-            onSuccess: () => toast.success("Profile successfully updated"),
-        });
+        if (props.user?.id) {
+            post(route("admin.editUser", props.user?.id), {
+                preserveScroll: true,
+                onSuccess: () => toast.success("Profile successfully updated"),
+            });
+        } else {
+            post(route("admin.createUser"), {
+                preserveScroll: true,
+                onSuccess: () => toast.success("User successfully created"),
+            });
+        }
     }
 
     return (
         <>
+            <Head title={`Admin | ${props.user ? "Edit" : "Create"} User`} />
+
+            <div className="text-2xl my-2 bg-white shadow-md rounded p-4">
+                {props.user ? "Edit" : "Create"} User
+            </div>
+
             <div className="min-h-screen">
                 <div>
                     <form
@@ -74,6 +88,20 @@ export default function CreateEdit(props) {
                                     error={errors.last_name}
                                 />
                             </div>
+
+                            {!props.user && (
+                                <div>
+                                    <InputBox
+                                        type="password"
+                                        label="Password"
+                                        placeholder="Enter your Password"
+                                        name="password"
+                                        value={data.password}
+                                        onChange={handleChange}
+                                        error={errors.password}
+                                    />
+                                </div>
+                            )}
 
                             <div>
                                 <InputBox
@@ -106,19 +134,10 @@ export default function CreateEdit(props) {
                                     name="status"
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                     onChange={handleChange}
+                                    defaultValue={data.status}
                                 >
-                                    <option
-                                        value="1"
-                                        selected={data.status == 1}
-                                    >
-                                        Active
-                                    </option>
-                                    <option
-                                        value="2"
-                                        selected={data.status == 2}
-                                    >
-                                        Inactive
-                                    </option>
+                                    <option value="1">Active</option>
+                                    <option value="2">Inactive</option>
                                 </select>
                             </div>
 
@@ -128,6 +147,7 @@ export default function CreateEdit(props) {
                                     handleDateChange={handleDateChange}
                                     name="dob"
                                     label="Date of birth"
+                                    error={errors.dob}
                                 />
                             </div>
 
@@ -138,7 +158,15 @@ export default function CreateEdit(props) {
                                 <input
                                     type="file"
                                     onChange={handleFileChange}
+                                    className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                    aria-describedby="user_avatar_help"
+                                    id="user_avatar"
                                 />
+                                {errors.profile_photo && (
+                                    <span className="mt-2 text-sm text-red-600 dark:text-red-500">
+                                        {errors.profile_photo}
+                                    </span>
+                                )}
                                 {preview && (
                                     <img
                                         src={preview}
