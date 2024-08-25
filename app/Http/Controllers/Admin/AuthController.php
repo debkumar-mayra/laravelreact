@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,7 +40,19 @@ class AuthController extends Controller
     }
 
     function dashboard()  {
-        return inertia('Admin/Dashboard');
+
+        $data['active_user'] = User::role('USER')->where('status',1)->with('roles')->count();
+        $data['inactive_user'] = User::role('USER')->where('status',2)->count();
+        $dataTotal = User::select(DB::raw('count(id) as count'), DB::raw("MONTH(created_at)  as month"))->role('USER')->groupBy('month')->orderBy('month')->get()->toArray();
+        $models = collect($dataTotal);
+        $data['months'] = collect(range(0, 11))->map(
+          function ($month) use ($models) {
+            $match = $models->firstWhere('month', $month);
+            return $match ? $match['count'] : 0;
+          }
+        );
+
+        return inertia('Admin/Dashboard',compact('data'));
     
     }
 

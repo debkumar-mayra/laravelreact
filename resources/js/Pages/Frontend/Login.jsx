@@ -2,12 +2,38 @@ import { Link, useForm } from "@inertiajs/react";
 import InputBox from "../../components/InputBox.jsx";
 import PasswordInput from "../../components/PasswordInput.jsx";
 import LoadingButton from "../../components/LoadingButton.jsx";
+import { useEffect } from "react";
 
 export default function Login() {
     const { data, setData, post, reset, processing, errors } = useForm({
         password: "",
         email: "",
     });
+
+    useEffect(() => {
+        // Initialize Echo
+        // const echo = new Echo({
+        //     broadcaster: "pusher",
+        //     key: "neloasg6b4a17iq0urje",
+        //     wsHost: "localhost",
+        //     wsPort: 8080,
+        //     cluster: "mt1",
+        //     forceTLS: false,
+        //     disableStats: true,
+        // });
+
+        // window.Echo = echo;
+
+        Echo.channel("chat-channel").listen("ChatMessageEvent", (e) => {
+            console.log("go public");
+            //code for displaying the serve data
+            console.log(e); // the data from the server
+        });
+
+        // return () => {
+        //     echo.disconnect();
+        // };
+    }, []);
 
     const handleChange = (e) => {
         setData(e.target.name, e.target.value);

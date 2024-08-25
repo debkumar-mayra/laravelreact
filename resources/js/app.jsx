@@ -11,6 +11,8 @@ import { useRoute } from "ziggy-js";
 
 window.route = useRoute();
 window.toaster = toast;
+const urlParams = new URLSearchParams(window.location.search);
+window.urlParams = urlParams;
 
 router.on("finish", () => {
     // const { flash } = usePage().props;

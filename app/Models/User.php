@@ -86,8 +86,8 @@ class User extends Authenticatable
 
     public function scopeOrdering($query, array $filters)
     {
-        $query->when($filters['fieldName'] ?? null, function ($query, $search) use($filters){
-            $query->orderBy($search,$filters['shortBy']);
+        $query->when($filters['field_name'] ?? null, function ($query, $search) use($filters){
+            $query->orderBy($filters['field_name'],$filters['short_by']);
         });
     }
     

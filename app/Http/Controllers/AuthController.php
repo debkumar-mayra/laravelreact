@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ChatMessageEvent;
 use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
@@ -87,6 +88,13 @@ class AuthController extends Controller
             Auth::logout();
             return redirect('/admin/login');
         }
+    }
+
+    function reverb()  {
+        // dd('hhhhhhhhh');
+        broadcast(new ChatMessageEvent('This is a private message'))->toOthers();
+        return 'message send';
+
     }
 
 

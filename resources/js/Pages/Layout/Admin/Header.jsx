@@ -32,17 +32,15 @@ export default function Header() {
                                 </svg>
                             </button>
                             <a
-                                href="https://flowbite.com"
+                                href={route("admin.dashboard")}
                                 className="flex ms-2 md:me-24"
                             >
                                 <img
-                                    src="https://flowbite.com/docs/images/logo.svg"
+                                    src="../../../../../images/logo.png"
                                     className="h-8 me-3"
-                                    alt="FlowBite Logo"
+                                    alt=" Logo"
                                 />
-                                <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                                    Flowbite
-                                </span>
+                                <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"></span>
                             </a>
                         </div>
                         <div className="flex items-center">
@@ -95,24 +93,7 @@ export default function Header() {
                                                 Dashboard
                                             </Link>
                                         </li>
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                role="menuitem"
-                                            >
-                                                Settings
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                                                role="menuitem"
-                                            >
-                                                Earnings
-                                            </a>
-                                        </li>
+
                                         <li>
                                             <Link
                                                 href={route("logout")}
