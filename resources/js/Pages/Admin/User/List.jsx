@@ -7,6 +7,7 @@ import { Head, Link, router, useForm } from "@inertiajs/react";
 import { debounce, pickBy } from "lodash";
 import NameImage from "../../../components/NameImage";
 import Thead from "../../../components/table/Thead";
+import Dropdown from "../../../components/Dropdown";
 
 export default function UserList(props) {
     const { users } = props;
@@ -178,35 +179,29 @@ export default function UserList(props) {
                                         </span>
                                     </td>
                                     <td className="px-6 py-4">
-                                        <button
-                                            id={`dropdownMenuIconHorizontalButton_${user.id}`}
-                                            data-dropdown-toggle={`dropdownDotsHorizontal_${user.id}`}
-                                            className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                                            type="button"
-                                        >
-                                            <Icon
-                                                icon="solar:menu-dots-bold"
-                                                width="1.2rem"
-                                                height="1.2rem"
-                                            />
-                                        </button>
+                                        <Dropdown>
+                                            <Dropdown.Trigger>
+                                                <button
+                                                    data-dropdown-toggle={`dropdownDotsHorizontal_${user.id}`}
+                                                    className="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                                    type="button"
+                                                >
+                                                    <Icon
+                                                        icon="solar:menu-dots-bold"
+                                                        width="1.2rem"
+                                                        height="1.2rem"
+                                                    />
+                                                </button>
+                                            </Dropdown.Trigger>
 
-                                        <div
-                                            id={`dropdownDotsHorizontal_${user.id}`}
-                                            className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                                        >
-                                            <ul
-                                                className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                                                aria-labelledby={`dropdownMenuIconHorizontalButton_${user.id}`}
-                                            >
-                                                <li>
-                                                    <Link
-                                                        href={route(
-                                                            "admin.editUser",
-                                                            user.id
-                                                        )}
-                                                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white flex"
-                                                    >
+                                            <Dropdown.Content>
+                                                <Dropdown.Link
+                                                    href={route(
+                                                        "admin.editUser",
+                                                        user.id
+                                                    )}
+                                                >
+                                                    <div className="flex">
                                                         <Icon
                                                             icon="basil:edit-outline"
                                                             width="1.2rem"
@@ -214,16 +209,16 @@ export default function UserList(props) {
                                                             className="mr-1"
                                                         />
                                                         Edit
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        onClick={() =>
-                                                            deleteUser(user.id)
-                                                        }
-                                                        href="#"
-                                                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white text-red-600 flex"
-                                                    >
+                                                    </div>
+                                                </Dropdown.Link>
+
+                                                <Dropdown.Link
+                                                    href="#"
+                                                    onClick={() =>
+                                                        deleteUser(user.id)
+                                                    }
+                                                >
+                                                    <div className="flex text-red-600">
                                                         <Icon
                                                             icon="material-symbols-light:delete-outline"
                                                             width="1.2rem"
@@ -231,10 +226,10 @@ export default function UserList(props) {
                                                             className="mr-1"
                                                         />
                                                         Delete
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                                    </div>
+                                                </Dropdown.Link>
+                                            </Dropdown.Content>
+                                        </Dropdown>
                                     </td>
                                 </tr>
                             ))}

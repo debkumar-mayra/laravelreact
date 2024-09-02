@@ -8,8 +8,9 @@ Route::get('/admin', function () {
     return redirect()->route('admin.login');
 });
 
+
 Route::any('admin/login', [AuthController::class, 'login'])->name('admin.login');
-Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth','isAdmin'])->group(function () {
    Route::any('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
    Route::any('/profile', [AuthController::class, 'profile'])->name('profile');
    Route::post('/change-password',[AuthController::class,'changePassword'])->name('changePassword');
